@@ -14,6 +14,5 @@ var maxArea = function(height) {
             right--;
         }
     }
-    console.log("max:", max);
     return Math.max(...max);
 };
