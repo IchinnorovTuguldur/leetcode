@@ -33,7 +33,6 @@ var closeStrings = function(word1, word2) {
     }
     
     for(let e in word2){
-        // console.log(wordMap2.get(word2[e]));
         if(occurences.includes(wordMap2.get(word2[e])) && wordMap.has(word2[e])){
             let index = occurences.indexOf(wordMap2.get(word2[e]));
             occurences.splice(index,1);
