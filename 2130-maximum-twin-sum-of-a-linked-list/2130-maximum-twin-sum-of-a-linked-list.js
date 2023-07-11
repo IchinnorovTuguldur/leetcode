@@ -25,7 +25,7 @@ var pairSum = function(head) {
         let sum = vals[i]+vals[vals.length-i-1];
         sums.push(sum);
     }
-    console.log(sums);
+    // console.log(sums);
     let max = Math.max(...sums);
     return max;
 };
