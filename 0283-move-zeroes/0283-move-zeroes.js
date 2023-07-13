@@ -4,8 +4,6 @@
  */
 var moveZeroes = function(nums) {
     let zeros = 0;
-    let originalLen = nums.length;
-
     for(let i=0; i<nums.length; i++){
       if(nums[i] == 0){
           zeros++;
