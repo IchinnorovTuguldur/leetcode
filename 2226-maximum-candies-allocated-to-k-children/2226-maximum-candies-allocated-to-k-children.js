@@ -4,24 +4,20 @@
  * @return {number}
  */
 var maximumCandies = function(candies, k) {
-    function calculateNumKid(min_candy) {
-        let count = 0;
-        for (let candy of candies){
-            count += Math.floor(candy / min_candy);  
-        } 
-        return count >= k;
-    }
-
     let left = 0;
     let right = Math.max(...candies);
-
-    while (left <= right) {
-        let mid = left + Math.trunc((right - left) / 2);
-        if (calculateNumKid(mid)){
-            left = mid + 1;  
-        }else{
-            right = mid - 1;  
-        } 
+    
+    while(left <= right){
+        let mid = left + Math.trunc((right-left)/2);
+        let contains = 0;
+        for(let i=0; i<candies.length; i++){
+            contains += Math.floor(candies[i]/mid);
+        }
+        if(contains >= k){
+            left = mid+1;
+        }else if(contains < k){
+            right = mid-1;
+        }
     }
     return right;
 };
