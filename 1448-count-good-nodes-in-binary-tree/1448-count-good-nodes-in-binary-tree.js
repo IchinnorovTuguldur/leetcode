@@ -25,6 +25,5 @@ var goodNodes = function(root) {
         dfs(root.right,max);
     }
     dfs(root,root.val);
-    console.log()
     return counter;
 };
